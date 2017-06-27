@@ -1,0 +1,275 @@
+/* body background and correction for fixed navbar */
+body {
+    background: url("../images/vertical-waves/vertical-waves.png");
+    color: #666;
+    padding-top: 70px;
+}
+
+/* make p tags have a larger font size than default, other style changes */
+p {
+    font-size: 18px;
+    line-height: 1.5em;
+    padding-bottom: 15px;
+}
+
+p:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* elements that have a cadetblue background */
+.navbar-default .navbar-header, .textBanner, .textBanner > a {
+    background: #5ba;
+    color: #fff;
+}
+
+/* elements that have cadetblue text */
+
+h2,
+h3, .navbar-default .navbar-header:hover,
+.navbar-header:active, .navbar-default .navbar-header:hover a,
+.navbar-header:active a {
+    color: #5ba;
+    background: transparent;
+}
+
+/* elements that have cadetblue border */
+
+.footer {
+    border-top: 5px solid #5ba;
+}
+
+/* navbar color changing */
+.navbar-default {
+    background: white;
+    border-bottom: solid 2px #ddd;
+}
+
+/* navbar link styling */
+.nav li {
+    background: transparent;
+}
+
+.nav li:after {
+    content:"|";
+    color: #ddd;
+    position: absolute;
+    top: 1em;
+    right: 0;
+}
+
+.nav li:last-child:after {
+    content: "";
+}
+
+/* make navbar static on phones */
+
+@media screen and (max-width: 767px) {
+    .navbar-default {
+        position: static;
+    }
+    body {
+        padding-top: 0;
+    }
+}
+
+/* section header styling */
+
+.page-header {
+    margin-top: 0px;
+    border-bottom: 2px solid #ddd;
+}
+
+h2, h3 {
+    margin-top: 5px;
+}
+
+/* footer color changing */
+
+.footer {
+    background-color: #666;
+}
+
+.footer .container .text-muted {
+    margin-top: 1em;
+    color: #ddd;
+}
+
+
+/* style fonts: headers */
+
+h1,
+h2,
+h3,
+h1 > a, h3 > a {
+    font-family: "Georgia", serif;
+    font-weight: 800;
+}
+
+
+/* Style h1: name in navbar */
+
+.navbar-header {
+    font-size: 36px;
+}
+
+.navbar-brand {
+    float: none;
+}
+
+.navbar-brand > h1 {
+    display: inline;
+}
+
+.navbar-brand > h1 {
+    padding: 0px 15px;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+    height: auto;
+}
+
+
+/* style fonts: links and paragraphs */
+
+a,
+p {
+    font-family: "Arial", sans-serif;
+}
+
+/* ABOUT page: style image */
+.portrait {
+    padding-bottom: 1.5em;
+}
+
+
+/* CONTACT page: */
+
+.btn-primary {
+    border-radius: 0;
+    background: #5ba;
+    border: solid thin #398;
+}
+
+.btn-primary:hover {
+    background: #4a9;
+    border: solid thin #287;
+}
+
+.btn-primary:focus, .btn-primary:active, .btn-primary:active:focus, .btn-primary:active:hover {
+    background: #398;
+    border: solid thin #5ba;
+}
+
+/* PORTFOLIO page: */
+
+.textBanner {
+    margin-top: -3.5em;
+    padding: 1em;
+    z-index: 100;
+    position: relative;
+}
+
+.portfolioSection {
+    text-align: center;
+    margin: 1.5em 0;
+}
+
+.textBanner > a {
+    color: white;
+    text-decoration: none;
+}
+
+/* PORTFOLIO: interactive */
+.textBanner:hover > a, .textBanner:active > a, .textBanner:focus > a {
+    display: inline-block;
+    transform: scale(1.2, 1.2);
+    text-decoration: none;
+}
+
+.textBanner:active > a {
+    color: #000;
+}
+
+/* style icons in Connect With Me section */
+
+.connect > a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    padding: .2em;
+}
+
+.connect > a > div {
+    display: inline-block;
+    padding: .1em;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.orange {
+    background: orange;
+}
+
+.blue {
+    background: #3249B0;
+}
+
+.black {
+    background: black;
+}
+
+/* icons in Connect With Me section: interactive! */
+
+.connect > a:hover {
+}
+
+.connect > a:hover > div {
+    transform: scale(1.3, 1.3);
+}
+
+/* Make the navbar text centered at xs layout */
+
+@media screen and (max-width: 767px) {
+    .navbar-default {
+        text-align: center;
+    }
+}
+
+/* Make the about me portrait flow with descriptive text at sm and md views */
+
+@media screen and (min-width: 767px) {
+    .portrait-col {
+        display: inline-block;
+    }
+    .about-col {
+        display: inline;
+        float: none;
+        top: -2em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .portrait-col {
+        display: block;
+    }
+    .about-col {
+        display: block;
+        float: left;
+        top: 0em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .portrait-col {
+        display: block;
+    }
+    .about-col {
+        display: block;
+        float: left;
+        top: 0em;
+    }
+}
